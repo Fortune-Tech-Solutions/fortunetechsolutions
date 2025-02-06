@@ -17,13 +17,13 @@ const Testimonials = () => {
         ))
     }
     return (
-        <div className="py-16 mx-auto max-w-7xl flex justify-evenly px-4">
+        <div className="py-16 mx-auto max-w-7xl flex flex-col md:flex-row sm:pl-16 justify-evenly px-4">
             <div className="space-y-4 py-8 max-w-sm flex flex-col justify-between">
                 <div className="space-y-2">
                     <h2 className="text-4xl font-bold">What people tell about us.</h2>
                     <p>Here&apos;s what others had to say when working with the best people.</p>
                 </div>
-                <div className="flex space-x-4">
+                <div className="space-x-4 hidden md:flex">
                     <button onClick={prev} className="btn btn-circle">
                         <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
@@ -53,6 +53,19 @@ const Testimonials = () => {
                             ))
                         }
                     </div>
+                </div>
+                <div className="space-x-4 flex md:hidden mt-8">
+                    <button onClick={prev} className="btn btn-circle">
+                        <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12l4-4m-4 4 4 4" />
+                        </svg>
+                    </button>
+
+                    <button onClick={next} className="btn btn-circle">
+                        <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
