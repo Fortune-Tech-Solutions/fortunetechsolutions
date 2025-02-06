@@ -7,7 +7,7 @@ const plansOptions = [
         title: "Basic",
         value: (
             <div>
-                $799/<span className="text-2xl">package</span>
+                $799*<span className="text-2xl">package</span>
             </div>
         ),
         body: (
@@ -46,7 +46,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <button className="btn btn-secondary text-primary w-full rounded">Get Started</button>
+                <button className="btn btn-secondary text-primary w-full rounded">Buy Now</button>
             </div>
         )
     },
@@ -55,7 +55,7 @@ const plansOptions = [
         badge: true,
         value: (
             <div>
-                $1699/<span className="text-2xl">package</span>
+                $1699*<span className="text-2xl">package</span>
             </div>
         ),
         body: (
@@ -91,7 +91,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <button className="btn btn-secondary text-primary w-full rounded">Get Started</button>
+                <button className="btn btn-secondary text-primary w-full rounded">Buy Now</button>
             </div>
         )
     },
@@ -99,7 +99,7 @@ const plansOptions = [
         title: "Premium",
         value: (
             <div>
-                $5499/<span className="text-2xl">package</span>
+                $5499*<span className="text-2xl">package</span>
             </div>
         ),
         body: (
@@ -135,7 +135,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <button className="btn btn-secondary text-primary w-full rounded">Get Started</button>
+                <button className="btn btn-secondary text-primary w-full rounded">Buy Now</button>
             </div>
         )
     },

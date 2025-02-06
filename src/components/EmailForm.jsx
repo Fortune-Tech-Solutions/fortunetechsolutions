@@ -163,7 +163,7 @@ const EmailForm = () => {
             </div>
 
             <div className="mt-8 flex justify-between items-center space-x-4">
-                <div className="text-sm text-base-content/50">By clicking &quot;Talk to fts&quot;, I acknowledge I have read and understand the <span className="text-base-content">Privacy Notice</span>.</div>
+                <div className="text-sm text-base-content/50">By clicking &quot;Contact Us&quot;, I acknowledge I have read and understand the <span className="text-base-content">Privacy Notice</span>.</div>
                 <motion.button
                     whileTap={{ scale: 0.95 }}
                     className={`btn btn-secondary text-primary rounded px-8 ${isLoading ? "btn-disabled" : ""}`} onClick={sendForm}>

@@ -4,6 +4,7 @@ import fht from "../assets/projects images/fht.png"
 import pc from "../assets/projects images/pc.png"
 import restreetsmart from "../assets/projects images/restreetsmart.png"
 import fts from "../assets/projects images/fts.png"
+import Testimonials from "../components/Testimonials"
 
 const Projects = () => {
     return (
@@ -119,6 +120,9 @@ const Projects = () => {
                     <div className="divider divider-primary col-start-1 xl:col-end-auto"></div>
                 </div>
             </div>
+
+
+            <Testimonials />
         </div>
     );
 }
