@@ -1,3 +1,3 @@
-# FHT Web Solutions
+# Fortune Tech Solutions
 
-A landing page for Fortune Homes Team web solutions services.
+The official landing page of Fortune Tech Solution IT services.
