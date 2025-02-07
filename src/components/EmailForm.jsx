@@ -245,9 +245,9 @@ const EmailForm = () => {
                                 </div>
 
                                 <div>
-                                    <h2 className="font-bold">7. CONTACT</h2>
+                                    <h2 className="font-bold">7. CONTACTS</h2>
                                     <div className="pl-3 text-base-content/90">
-                                        <p>If you have any questions or concerns about this Privacy Policy, please contact us through our <span className="font-bold">Contact</span> section.</p>
+                                        <p>If you have any questions or concerns about this Privacy Policy, please contact us through our <span className="font-bold">Contacts</span> section.</p>
                                     </div>
                                 </div>
 
