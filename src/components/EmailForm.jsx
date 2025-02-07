@@ -2,6 +2,7 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useEffect } from "react";
 import { motion } from "framer-motion"
+import Modal from "./Modal";
 
 const EmailForm = () => {
 
@@ -163,7 +164,101 @@ const EmailForm = () => {
             </div>
 
             <div className="mt-8 flex justify-between items-center space-x-4">
-                <div className="text-sm text-base-content/50">By clicking &quot;Contact Us&quot;, I acknowledge I have read and understand the <span className="text-base-content">Privacy Notice</span>.</div>
+                <div className="text-sm text-base-content/50">By clicking &quot;Contact Us&quot;, I acknowledge I have read and understand the <span className="text-base-content">
+
+                    {/* The button to open modal */}
+                    <label htmlFor="my_modal_6" className="hover:underline hover:cursor-pointer">Privacy Notice</label>
+                    <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+                    <Modal
+                        title="PRIVACY POLICY"
+                        content={
+                            <div className="space-y-4">
+                                <p>Last updated February, 2025</p>
+                                <p className="text-base-content/90">We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you fill out the email form on our website.</p>
+
+                                <div>
+                                    <h2 className="font-bold">1. INFORMATION WE COLLECT</h2>
+                                    <div className="pl-3 text-base-content/90">
+                                        <p>When you fill out the email form on our website, we may collect the following personal information:</p>
+                                        <ul className="list-disc list-inside">
+                                            <li>Your name</li>
+                                            <li>Your email address</li>
+                                            <li>Any additional information you choose to provide</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <h2 className="font-bold">2. HOW WE USE YOUR INFORMATION</h2>
+                                    <div className="pl-3 text-base-content/90">
+                                        <p>We use the information we collect for the following purposes:</p>
+                                        <ul className="list-disc list-inside">
+                                            <li>To respond to your inquiries and provide you with requested information</li>
+                                            <li>To send you updates, newsletters, and other communications related to our services, if you have opted in</li>
+                                            <li>To improve our website and services</li>
+                                            <li>To comply with legal obligations and protect our legal rights</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <h2 className="font-bold">3. HOW WE DISCLOSE YOUR INFORMATION</h2>
+                                    <div className="pl-3 text-base-content/90">
+                                        <p>We do not sell, trade, or otherwise transfer your personal information to outside parties, except as described below:</p>
+                                        <ul className="list-disc list-inside">
+                                            <li>We may share your information with trusted third-party service providers who assist us in operating our website, conducting business, or serving our users.</li>
+                                            <li>We may disclose your information if required by law or in response to valid legal requests.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <h2 className="font-bold">4. HOW WE PROTECT YOUR INFORMATION</h2>
+                                    <div className="pl-3 text-base-content/90">
+                                        <p>We implement reasonable security measures to protect the personal information we collect. However, no security measures are perfect, and we cannot guarantee complete security.</p>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <h2 className="font-bold">5. YOUR RIGHTS</h2>
+                                    <div className="pl-3 text-base-content/90">
+                                        <p>You have the following rights concerning your personal information:</p>
+                                        <ul className="list-disc list-inside">
+                                            <li>The right to access and receive a copy of your personal information</li>
+                                            <li>The right to correct any inaccurate or incomplete information</li>
+                                            <li>The right to request the deletion of your personal information</li>
+                                            <li>The right to object to the processing of your personal information</li>
+                                            <li>The right to withdraw your consent at any time</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h2 className="font-bold">6. CHANGES TO THIS PRIVACY POLICY</h2>
+                                    <div className="pl-3 text-base-content/90">
+                                        <p>We may update this Privacy Policy from time to time. When we do, we will post the revised policy on this page with the updated effective date.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h2 className="font-bold">7. CONTACT</h2>
+                                    <div className="pl-3 text-base-content/90">
+                                        <p>If you have any questions or concerns about this Privacy Policy, please contact us through our <span className="font-bold">Contact</span> section.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        }
+                        action={
+                            <label htmlFor="my_modal_6" className="btn rounded">Close</label>
+                        }
+                    />
+
+                </span>.</div>
                 <motion.button
                     whileTap={{ scale: 0.95 }}
                     className={`btn btn-secondary text-primary rounded px-8 ${isLoading ? "btn-disabled" : ""}`} onClick={sendForm}>
