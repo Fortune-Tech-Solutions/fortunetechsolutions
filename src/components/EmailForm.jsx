@@ -167,7 +167,7 @@ const EmailForm = () => {
                 <div className="text-sm text-base-content/50">By clicking &quot;Contact Us&quot;, I acknowledge I have read and understand the <span className="text-base-content">
 
                     {/* The button to open modal */}
-                    <label htmlFor="my_modal_6" className="hover:underline hover:cursor-pointer">Privacy Notice</label>
+                    <label htmlFor="my_modal_6" className="hover:underline hover:cursor-pointer">Privacy Policy</label>
                     <input type="checkbox" id="my_modal_6" className="modal-toggle" />
                     <Modal
                         title="PRIVACY POLICY"
