@@ -254,7 +254,7 @@ const EmailForm = () => {
                             </div>
                         }
                         action={
-                            <label htmlFor="my_modal_6" className="btn rounded">Close</label>
+                            <label htmlFor="my_modal_6" className="btn btn-primary rounded">Close</label>
                         }
                     />
 
