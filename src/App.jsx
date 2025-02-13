@@ -23,7 +23,7 @@ function App() {
         <Section content={<Projects />} id={3} />
         <Section content={<Pricing />} id={4} />
 
-        <Section container content={<Contacts />} id={5} />
+        <Section content={<Contacts />} id={5} />
 
         <Footer />
       </DrawerWrap>

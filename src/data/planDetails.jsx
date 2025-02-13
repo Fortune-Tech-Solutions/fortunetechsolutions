@@ -17,7 +17,6 @@ const planDetails = [
         feature2: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Up to 3 months</li>
                     <li>- Updates for essential website/landing pages</li>
                     <li>- Migration</li>
                     <li>- Basic backup solutions (local only)</li>
@@ -63,7 +62,6 @@ const planDetails = [
         feature2: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Up to 3 months</li>
                     <li>- Updates for essential website/landing pages</li>
                     <li>- Migration</li>
                     <li>- Basic backup solutions (local only)</li>
@@ -118,7 +116,6 @@ const planDetails = [
         feature2: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Up to 3 months</li>
                     <li>- Updates for essential website/landing pages</li>
                     <li>- Migration</li>
                     <li>- Basic backup solutions (local only)</li>

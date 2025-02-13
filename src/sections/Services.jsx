@@ -69,9 +69,9 @@ const Services = () => {
                     </div>
 
                     <div className="card-body pb-0">
-                        <h3 className="text-xl font-bold card-title">Website Solutions</h3>
+                        <h3 className="text-xl font-bold card-title">Website Development</h3>
                         <p className="text-sm text-base-content/75">- Landing Page</p>
-                        <p className="text-sm text-base-content/75">- Custom Website Design</p>
+                        <p className="text-sm text-base-content/75">- Custom Website Development</p>
                         <p className="text-sm text-base-content/75">- Ecommerce</p>
                         <p className="text-sm text-base-content/75">- Web App</p>
                     </div>
