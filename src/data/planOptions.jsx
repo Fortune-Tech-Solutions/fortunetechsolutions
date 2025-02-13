@@ -35,7 +35,7 @@ const plansOptions = [
                     </li>
                     <li className="flex items-center">
                         <span className="mr-2"><CloseIcon /></span>
-                        Included Service/s
+                        Additional Services
                     </li>
                     <li className="flex items-center">
                         <span className="mr-2"><CloseIcon /></span>
@@ -46,7 +46,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <button className="btn btn-secondary text-primary w-full rounded">Buy Now</button>
+                <Link to="section5" smooth={true} className="btn btn-secondary text-primary w-full rounded">Buy Now</Link>
             </div>
         )
     },
@@ -80,7 +80,7 @@ const plansOptions = [
                     </li>
                     <li className="flex items-center">
                         <span className="mr-2"><CheckIcon /></span>
-                        Included Service/s
+                        Additional Services
                     </li>
                     <li className="flex items-center">
                         <span className="mr-2"><CloseIcon /></span>
@@ -91,7 +91,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <button className="btn btn-secondary text-primary w-full rounded">Buy Now</button>
+                <Link to="section5" smooth={true} className="btn btn-secondary text-primary w-full rounded">Buy Now</Link>
             </div>
         )
     },
@@ -124,7 +124,7 @@ const plansOptions = [
                     </li>
                     <li className="flex items-center">
                         <span className="mr-2"><CheckIcon /></span>
-                        Included Service/s
+                        Additional Services
                     </li>
                     <li className="flex items-center">
                         <span className="mr-2"><CheckIcon /></span>
@@ -135,7 +135,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <button className="btn btn-secondary text-primary w-full rounded">Buy Now</button>
+                <Link to="section5" smooth={true} className="btn btn-secondary text-primary w-full rounded">Buy Now</Link>
             </div>
         )
     },

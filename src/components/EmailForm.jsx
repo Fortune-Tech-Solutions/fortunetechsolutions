@@ -10,6 +10,9 @@ const EmailForm = () => {
 
     const [formData, setFormData] = useState({
         from_email: { value: "", isValid: true, errorMessage: "" },
+        from_firstName: { value: "", isValid: true, errorMessage: "" },
+        from_lastName: { value: "", isValid: true, errorMessage: "" },
+        from_phone: { value: "", isValid: true, errorMessage: "" },
         message: { value: "", isValid: true, errorMessage: "" },
     });
 
@@ -32,25 +35,53 @@ const EmailForm = () => {
     const sendForm = (e) => {
         e.preventDefault();
 
+
         const templateParams = {
             from_email: formData.from_email.value,
+            from_firstName: formData.from_firstName.value,
+            from_lastName: formData.from_lastName.value,
+            from_phone: formData.from_phone.value,
             message: formData.message.value,
         }
 
-        let isValid = true;
+        let formValid = true;
 
         if (!formData.from_email.value) {
             setFormData(prev => ({
                 ...prev,
                 from_email: { ...prev.from_email, isValid: false, errorMessage: "This field shouldn't be empty." }
             }))
-            isValid = false;
+            formValid = false;
         } else if (!emailRegex.test(formData.from_email.value)) {
             setFormData((prev) => ({
                 ...prev,
                 from_email: { ...prev.from_email, isValid: false, errorMessage: "Invalid email format." }
             }))
-            isValid = false;
+            formValid = false;
+        }
+
+        if (!formData.from_firstName.value) {
+            setFormData(prev => ({
+                ...prev,
+                from_firstName: { ...prev.from_firstName, isValid: false, errorMessage: "This field shouldn't be empty." }
+            }))
+            formValid = false;
+        }
+
+        if (!formData.from_lastName.value) {
+            setFormData(prev => ({
+                ...prev,
+                from_lastName: { ...prev.from_lastName, isValid: false, errorMessage: "This field shouldn't be empty." }
+            }))
+            formValid = false;
+        }
+
+        if (!formData.from_phone.value) {
+            setFormData(prev => ({
+                ...prev,
+                from_phone: { ...prev.from_phone, isValid: false, errorMessage: "This field shouldn't be empty." }
+            }))
+            formValid = false;
         }
 
         if (!formData.message.value) {
@@ -58,16 +89,19 @@ const EmailForm = () => {
                 ...prev,
                 message: { ...prev.message, isValid: false, errorMessage: "This field shouldn't be empty." }
             }))
-            isValid = false;
+            formValid = false;
         } else if (formData.message.value.length < 2) {
             setFormData(prev => ({
                 ...prev,
                 message: { ...prev.message, isValid: false, errorMessage: "Enter atleast 2 characters." }
             }))
-            isValid = false;
+            formValid = false;
         }
 
-        if (!isValid) return;
+        if (!formValid) {
+            document.getElementById("emailForm").scrollIntoView({ behavior: "smooth", block: "start" })
+            return
+        };
 
         setIsLoading(true)
         emailjs.send('service_8zzqrkd', 'template_hpkokfj', templateParams).then(
@@ -76,6 +110,9 @@ const EmailForm = () => {
                 if (response) {
                     setFormData({
                         from_email: { value: "", isValid: true, errorMessage: "" },
+                        from_firstName: { value: "", isValid: true, errorMessage: "" },
+                        from_lastName: { value: "", isValid: true, errorMessage: "" },
+                        from_phone: { value: "", isValid: true, errorMessage: "" },
                         message: { value: "", isValid: true, errorMessage: "" },
                     })
 
@@ -149,7 +186,37 @@ const EmailForm = () => {
                     <div className={`transition duration-0 tooltip tooltip-error tooltip-open ${formData.from_email.isValid ? "opacity-0" : "opacity-100"}`} data-tip={formData.from_email.errorMessage} />
                     <input type="email" name="from_email" value={formData.from_email.value} onChange={handleFormChange}
                         className={`input ${!formData.from_email.isValid ? "border-error" : "border-base-content/75"} rounded w-full max-w-lg`}
-                        placeholder="Type your email here"
+                        placeholder="Your email"
+                    />
+                </div>
+
+                <div className="flex flex-col lg:flex-row items-center lg:space-x-4">
+                    <div className="form-control w-full">
+                        <label className="label" htmlFor="from_firstName">First Name</label>
+                        <div className={`transition duration-0 tooltip tooltip-error tooltip-open ${formData.from_firstName.isValid ? "opacity-0" : "opacity-100"}`} data-tip={formData.from_firstName.errorMessage} />
+                        <input type="text" name="from_firstName" value={formData.from_firstName.value} onChange={handleFormChange}
+                            className={`input ${!formData.from_firstName.isValid ? "border-error" : "border-base-content/75"} rounded w-full max-w-lg`}
+                            placeholder="Your first name"
+                        />
+                    </div>
+
+                    <div className="form-control w-full">
+                        <label className="label" htmlFor="from_lastName">Last Name</label>
+                        <div className={`transition duration-0 tooltip tooltip-error tooltip-open ${formData.from_lastName.isValid ? "opacity-0" : "opacity-100"}`} data-tip={formData.from_lastName.errorMessage} />
+                        <input type="text" name="from_lastName" value={formData.from_lastName.value} onChange={handleFormChange}
+                            className={`input ${!formData.from_lastName.isValid ? "border-error" : "border-base-content/75"} rounded w-full max-w-lg`}
+                            placeholder="Your last name"
+                        />
+                    </div>
+                </div>
+
+
+                <div className="form-control">
+                    <label className="label" htmlFor="from_phone">Phone</label>
+                    <div className={`transition duration-0 tooltip tooltip-error tooltip-open ${formData.from_phone.isValid ? "opacity-0" : "opacity-100"}`} data-tip={formData.from_phone.errorMessage} />
+                    <input type="tel" name="from_phone" value={formData.from_phone.value} onChange={handleFormChange}
+                        className={`input ${!formData.from_phone.isValid ? "border-error" : "border-base-content/75"} rounded w-full max-w-lg`}
+                        placeholder="Your phone numer"
                     />
                 </div>
 
@@ -158,7 +225,7 @@ const EmailForm = () => {
                     <div className={`transition duration-0 tooltip tooltip-error tooltip-open ${formData.message.isValid ? "opacity-0" : "opacity-100"}`} data-tip={formData.message.errorMessage} />
                     <textarea name="message" value={formData.message.value} onChange={handleFormChange}
                         className={`textarea ${!formData.message.isValid ? "border-error" : "border-base-content/75"} text-base rounded w-full max-w-lg`} rows={8}
-                        placeholder="Type your email here"
+                        placeholder="Your message..."
                     />
                 </div>
             </div>
@@ -195,7 +262,7 @@ const EmailForm = () => {
                                         <p>We use the information we collect for the following purposes:</p>
                                         <ul className="list-disc list-inside">
                                             <li>To respond to your inquiries and provide you with requested information</li>
-                                            <li>To send you updates, newsletters, and other communications related to our services, if you have opted in</li>
+                                            <li>To send you updates, newsletters, and other communications related to our services, if you have opted in (You can always choose to opt out)</li>
                                             <li>To improve our website and services</li>
                                             <li>To comply with legal obligations and protect our legal rights</li>
                                         </ul>

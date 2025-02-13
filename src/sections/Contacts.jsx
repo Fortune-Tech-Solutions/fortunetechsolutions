@@ -2,7 +2,7 @@ import EmailForm from "../components/EmailForm";
 
 const Contacts = () => {
     return (
-        <div className="lg:h-[calc(100svh-(4rem+4rem))] flex justify-center items-center">
+        <div className="flex justify-center items-center max-w-7xl mx-auto">
             <div className="border border-base-content/75 rounded grid grid-cols-1 md:grid-cols-2 w-full mx-2">
 
                 <div className="flex flex-col justify-center items-center p-8">
@@ -27,7 +27,7 @@ const Contacts = () => {
                     </div>
                 </div>
 
-                <div className="flex justify-center border-t md:border-t-0 border-l-0 md:border-l border-base-content/75">
+                <div id="emailForm" className="flex justify-center border-t md:border-t-0 border-l-0 md:border-l border-base-content/75 py-8">
                     <EmailForm />
                 </div>
             </div>
