@@ -46,7 +46,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <Link to="section5" smooth={true} className="btn btn-secondary text-primary w-full rounded">Buy Now</Link>
+                <Link to="section5" smooth={true} className="btn btn-accent text-primary w-full rounded">Buy Now</Link>
             </div>
         )
     },
@@ -91,7 +91,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <Link to="section5" smooth={true} className="btn btn-secondary text-primary w-full rounded">Buy Now</Link>
+                <Link to="section5" smooth={true} className="btn btn-accent text-primary w-full rounded">Buy Now</Link>
             </div>
         )
     },
@@ -135,7 +135,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <Link to="section5" smooth={true} className="btn btn-secondary text-primary w-full rounded">Buy Now</Link>
+                <Link to="section5" smooth={true} className="btn btn-accent text-primary w-full rounded">Buy Now</Link>
             </div>
         )
     },
@@ -153,7 +153,7 @@ const plansOptions = [
         ),
         actions: (
             <div className="space-x-1 w-full mt-8">
-                <Link to="section5" smooth={true} className="btn btn-secondary text-primary w-full rounded">Contact Us</Link>
+                <Link to="section5" smooth={true} className="btn btn-accent text-primary w-full rounded">Contact Us</Link>
             </div>
         )
     },

@@ -27,7 +27,7 @@ const Services = () => {
                         </div>
                         <div className="bg-[#262626] dark:text-base-content text-base-100 flex justify-center px-4 py-16">Hello World!</div>
                     </div>
-                    <div className="mockup-phone absolute border scale-[0.2] top-[-70px] right-[-90px] md:scale-[0.3] md:top-[-115px] md:right-[-70px] shadow-xl">
+                    <div className="mockup-phone absolute border scale-[0.2] top-[-85px] right-[-90px] md:scale-[0.23] md:top-[-95px] lg:scale-[0.3] shadow-xl">
                         <div className="camera"></div>
                         <div className="display">
                             <div className="artboard artboard-demo bg-[#262626] phone-1 relative">
@@ -103,16 +103,17 @@ const Services = () => {
                             </div>
                         </div>
                     </div> */}
-                    <figure>
-                        <img src={marketingGraphics} alt="marketing graphics" className="rounded border border-black dark:border-base-content/10" />
+                    <figure className="max-w-sm px-2">
+                        <img src={marketingGraphics} alt="marketing graphics" className="rounded border border-black dark:border-base-content/10 w-full" />
                     </figure>
 
                     <div className="card-body pb-0">
                         <h3 className="text-xl font-bold card-title">Marketing</h3>
-                        <p className="text-sm text-base-content/75">You don&apos;t know marketing. But we know!</p>
-                        <p className="text-sm text-base-content/75">- CRM setup</p>
+                        {/* <p className="text-sm text-base-content/75">You don&apos;t know marketing. But we know!</p> */}
+                        <p className="text-sm text-base-content/75">- Custom CRM setup</p>
                         <p className="text-sm text-base-content/75">- Phone system setup</p>
                         <p className="text-sm text-base-content/75">- Automation</p>
+                        <p className="text-sm text-base-content/75">- AI Agent</p>
                     </div>
                 </div>
             </div>

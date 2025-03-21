@@ -7,9 +7,8 @@ const planDetails = [
         feature1: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Up to 3 months</li>
-                    <li>- Business hours (9 AM - 5 PM) email support</li>
-                    <li>- Limited phone support (9 AM - 5 PM)</li>
+                    <li>- Up to 3 months (upon completion)</li>
+                    <li>- Phone & Email support (9 AM - 5 PM)</li>
                     <li>- Remote troubleshooting</li>
                 </ul>
             </div>
@@ -26,8 +25,8 @@ const planDetails = [
         feature3: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Up to 3 months</li>
-                    <li>- 1 hour of IT consultation per month</li>
+                    <li>- Up to 3 months (upon completion)</li>
+                    <li>- 1 hour of IT consultation per month (during the project & upon completion)</li>
                 </ul>
             </div>
         ),
@@ -52,9 +51,8 @@ const planDetails = [
         feature1: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Up to 3 months</li>
-                    <li>- Business hours (9 AM - 5 PM) email support</li>
-                    <li>- Limited phone support (9 AM - 5 PM)</li>
+                    <li>- Up to 3 months (upon completion)</li>
+                    <li>- Phone & Email support (9 AM - 5 PM)</li>
                     <li>- Remote troubleshooting and diagnostics</li>
                 </ul>
             </div>
@@ -71,7 +69,7 @@ const planDetails = [
         feature3: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- 3 hours of IT consultation per month</li>
+                    <li>- 3 hours of IT consultation per month (during the project & upon completion)</li>
                     <li>- Annual IT strategy planning session</li>
                 </ul>
             </div>
@@ -79,9 +77,8 @@ const planDetails = [
         feature4: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Up to 3 months</li>
+                    <li>- Up to 3 months (upon completion)</li>
                     <li>- Initial setup</li>
-                    <li>- Monthly maintenance and monitoring</li>
                     <li>- Advanced CRM and tagging setup</li>
                 </ul>
             </div>
@@ -104,9 +101,8 @@ const planDetails = [
         feature1: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Up to 3 months</li>
-                    <li>- Business hours (9 AM - 5 PM) email support</li>
-                    <li>- Limited phone support (9 AM - 5 PM)</li>
+                    <li>- Up to 3 months (upon completion)</li>
+                    <li>- Phone & Email support (9 AM - 5 PM)</li>
                     <li>- Remote troubleshooting and diagnostics</li>
                     <li>- Dedicated Account Manager</li>
                     <li>- Proactive issue resolution</li>
@@ -125,7 +121,7 @@ const planDetails = [
         feature3: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Unlimited IT consultation hours</li>
+                    <li>- Unlimited IT consultation hours (9 AM - 5 PM)</li>
                     <li>- Quarterly IT strategy and review sessions</li>
                     <li>- Custom IT project management</li>
                 </ul>
@@ -134,9 +130,9 @@ const planDetails = [
         feature4: (
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
-                    <li>- Up to 3 months</li>
+                    <li>- Up to 3 months (upon completion)</li>
                     <li>- Initial setup</li>
-                    <li>- Monthly maintenance and monitoring</li>
+                    <li>- Monthly maintenance and monitoring (once a month)</li>
                     <li>- Advanced CRM and tagging setup</li>
                 </ul>
             </div>
@@ -153,7 +149,6 @@ const planDetails = [
             <div className="px-2 py-4 text-base-content/70">
                 <ul className="space-y-2">
                     <li>- Custom network architecture and optimization</li>
-                    <li>- Daily maintenance and monitoring</li>
                     <li>- Advanced firewall, IDS/IPS, and security measures</li>
                 </ul>
             </div>

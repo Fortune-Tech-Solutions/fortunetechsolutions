@@ -72,9 +72,9 @@ const Pricing = () => {
                             <div className="flex justify-center">
                                 <div className="label">
                                     <label htmlFor="radio1"
-                                        className={`border-b h-16 ${activeTab === 1 ? "border-secondary" : "dark:border-base-content border-primary"} cursor-pointer px-2`}
+                                        className={`border-b h-16 ${activeTab === 1 ? "border-accent" : "dark:border-base-content border-primary"} cursor-pointer px-2`}
                                     >
-                                        <div className={`h-full duration-500 transition-all ${activeTab === 1 ? "translate-y-[35%] text-secondary text-2xl font-extrabold" : "translate-y-[55%]"}`}>
+                                        <div className={`h-full duration-100 transition-all ${activeTab === 1 ? "translate-y-[35%] text-accent text-2xl font-extrabold" : "translate-y-[55%]"}`}>
                                             Basic
                                         </div>
                                     </label>
@@ -90,9 +90,9 @@ const Pricing = () => {
                                 </div>
                                 <div className="label">
                                     <label htmlFor="radio2"
-                                        className={`border-b h-16 ${activeTab === 2 ? "border-secondary" : "dark:border-base-content border-primary"} cursor-pointer px-2`}
+                                        className={`border-b h-16 ${activeTab === 2 ? "border-accent" : "dark:border-base-content border-primary"} cursor-pointer px-2`}
                                     >
-                                        <div className={`h-full duration-500 transition-all  ${activeTab ===  2 ? "translate-y-[35%] text-secondary text-2xl font-extrabold" : "translate-y-[55%]"}`}>
+                                        <div className={`h-full duration-100 transition-all  ${activeTab ===  2 ? "translate-y-[35%] text-accent text-2xl font-extrabold" : "translate-y-[55%]"}`}>
                                             Advanced
                                         </div>
                                     </label>
@@ -107,9 +107,9 @@ const Pricing = () => {
                                 </div>
                                 <div className="label">
                                     <label htmlFor="radio3"
-                                        className={`border-b h-16 ${activeTab === 3 ? "border-secondary" : "dark:border-base-content border-primary"} cursor-pointer px-2`}
+                                        className={`border-b h-16 ${activeTab === 3 ? "border-accent" : "dark:border-base-content border-primary"} cursor-pointer px-2`}
                                     >
-                                        <div className={`h-full duration-500 transition-all ${activeTab === 3 ? "translate-y-[35%] text-secondary text-2xl font-extrabold" : "translate-y-[55%]"}`}>
+                                        <div className={`h-full duration-100 transition-all ${activeTab === 3 ? "translate-y-[35%] text-accent text-2xl font-extrabold" : "translate-y-[55%]"}`}>
                                             Premium
                                         </div>
                                     </label>
@@ -124,9 +124,9 @@ const Pricing = () => {
                                 </div>
                                 <div className="label">
                                     <label htmlFor="radio4"
-                                        className={`border-b h-16 ${activeTab === 4 ? "border-secondary" : "dark:border-base-content border-primary"} cursor-pointer px-2`}
+                                        className={`border-b h-16 ${activeTab === 4 ? "border-accent" : "dark:border-base-content border-primary"} cursor-pointer px-2`}
                                     >
-                                        <div className={`h-full duration-500 transition-all ${activeTab === 4 ? "translate-y-[35%] text-secondary text-2xl font-extrabold" : "translate-y-[55%]"}`}>
+                                        <div className={`h-full duration-100 transition-all ${activeTab === 4 ? "translate-y-[35%] text-accent text-2xl font-extrabold" : "translate-y-[55%]"}`}>
                                             Custom
                                         </div>
                                     </label>
@@ -153,7 +153,7 @@ const Pricing = () => {
                                                 <div className="p-2 text-center text-xl flex flex-col sm:flex-row justify-center items-center sm:space-x-4">
                                                     <p>{planDetail.package}</p>
                                                     <div className="flex justify-center">
-                                                        <Link to="section5" smooth={true} onClick={seeDetailsClose} className="btn btn-secondary btn-sm text-primary rounded">
+                                                        <Link to="section5" smooth={true} onClick={seeDetailsClose} className="btn btn-accent btn-sm text-primary rounded">
                                                             {
                                                                 index === 3 ? "Contact Us" : "Buy Now"
                                                             }

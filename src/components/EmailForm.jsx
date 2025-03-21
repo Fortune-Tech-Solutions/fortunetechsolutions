@@ -1,8 +1,9 @@
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { motion } from "framer-motion"
 import Modal from "./Modal";
+import { sendToGHL } from "../services/ghl";
 
 const EmailForm = () => {
 
@@ -32,17 +33,8 @@ const EmailForm = () => {
         }))
     }
 
-    const sendForm = (e) => {
+    const sendForm = async (e) => {
         e.preventDefault();
-
-
-        const templateParams = {
-            from_email: formData.from_email.value,
-            from_firstName: formData.from_firstName.value,
-            from_lastName: formData.from_lastName.value,
-            from_phone: formData.from_phone.value,
-            message: formData.message.value,
-        }
 
         let formValid = true;
 
@@ -104,59 +96,100 @@ const EmailForm = () => {
         };
 
         setIsLoading(true)
-        emailjs.send('service_8zzqrkd', 'template_hpkokfj', templateParams).then(
-            (response) => {
+        // emailjs.send('service_8zzqrkd', 'template_hpkokfj', templateParams).then(
+        //     (response) => {
 
-                if (response) {
-                    setFormData({
-                        from_email: { value: "", isValid: true, errorMessage: "" },
-                        from_firstName: { value: "", isValid: true, errorMessage: "" },
-                        from_lastName: { value: "", isValid: true, errorMessage: "" },
-                        from_phone: { value: "", isValid: true, errorMessage: "" },
-                        message: { value: "", isValid: true, errorMessage: "" },
-                    })
+        //         if (response) {
+        //             setFormData({
+        //                 from_email: { value: "", isValid: true, errorMessage: "" },
+        //                 from_firstName: { value: "", isValid: true, errorMessage: "" },
+        //                 from_lastName: { value: "", isValid: true, errorMessage: "" },
+        //                 from_phone: { value: "", isValid: true, errorMessage: "" },
+        //                 message: { value: "", isValid: true, errorMessage: "" },
+        //             })
 
-                    setIsLoading(false)
-                    setSubmissionState({ ...submissionState, state: true, success: true })
+        //             setIsLoading(false)
+        //             setSubmissionState({ ...submissionState, state: true, success: true })
 
-                    setTimeout(() => {
-                        setSubmissionState({ ...submissionState, state: false });
-                    }, 2000);
-                }
+        //             setTimeout(() => {
+        //                 setSubmissionState({ ...submissionState, state: false });
+        //             }, 2000);
+        //         }
 
-            },
-            // error
-            () => {
+        //     },
+        //     // error
+        //     () => {
 
+        //         setIsLoading(false)
+        //         setSubmissionState({ ...submissionState, state: true, success: false })
+
+        //         setTimeout(() => {
+        //             setSubmissionState({ ...submissionState, state: false });
+        //         }, 2000);
+        //     },
+        // );
+
+
+        const json = {
+            email: formData.from_email.value,
+            firstName: formData.from_firstName.value,
+            lastName: formData.from_lastName.value,
+            phone: formData.from_phone.value,
+            message: formData.message.value,
+        }
+
+        try {
+            const res = await sendToGHL(json);
+
+            if (res) {
+                console.log("success");
+                
+                setFormData({
+                    from_email: { value: "", isValid: true, errorMessage: "" },
+                    from_firstName: { value: "", isValid: true, errorMessage: "" },
+                    from_lastName: { value: "", isValid: true, errorMessage: "" },
+                    from_phone: { value: "", isValid: true, errorMessage: "" },
+                    message: { value: "", isValid: true, errorMessage: "" },
+                })
+
+                setIsLoading(false)
+                setSubmissionState({ ...submissionState, state: true, success: true })
+
+                setTimeout(() => {
+                    setSubmissionState({ ...submissionState, state: false });
+                }, 2000)
+            }
+        } catch (error) {
+            if (error) {
                 setIsLoading(false)
                 setSubmissionState({ ...submissionState, state: true, success: false })
 
                 setTimeout(() => {
                     setSubmissionState({ ...submissionState, state: false });
                 }, 2000);
-            },
-        );
+            }
+        }
     }
 
-    useEffect(() => {
-        emailjs.init({
-            publicKey: '1EyTY6eLSshat_knt',
-            // Do not allow headless browsers
-            blockHeadless: true,
-            blockList: {
-                // Block the suspended emails
-                list: ['foo@emailjs.com', 'bar@emailjs.com'],
-                // The variable contains the email address
-                watchVariable: 'userEmail',
-            },
-            limitRate: {
-                // Set the limit rate for the application
-                id: 'app',
-                // Allow 1 request per 10s
-                throttle: 10000,
-            },
-        });
-    }, []);
+    // useEffect(() => {
+    //     emailjs.init({
+    //         publicKey: '1EyTY6eLSshat_knt',
+    //         // Do not allow headless browsers
+    //         blockHeadless: true,
+    //         blockList: {
+    //             // Block the suspended emails
+    //             list: ['foo@emailjs.com', 'bar@emailjs.com'],
+    //             // The variable contains the email address
+    //             watchVariable: 'userEmail',
+    //         },
+    //         limitRate: {
+    //             // Set the limit rate for the application
+    //             id: 'app',
+    //             // Allow 1 request per 10s
+    //             throttle: 10000,
+    //         },
+    //     });
+    // }, []);
 
 
     return (
@@ -328,7 +361,7 @@ const EmailForm = () => {
                 </span>.</div>
                 <motion.button
                     whileTap={{ scale: 0.95 }}
-                    className={`btn btn-secondary text-primary rounded px-8 ${isLoading ? "btn-disabled" : ""}`} onClick={sendForm}>
+                    className={`btn btn-accent text-primary rounded px-8 ${isLoading ? "btn-disabled" : ""}`} onClick={sendForm}>
                     {
                         isLoading ?
                             <span className="loading loading-dots loading-sm" /> :
