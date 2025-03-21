@@ -16,7 +16,7 @@ const Card = ({ index, title, body, actions, badge = false, kebab = false, class
                         <h2 className="card-title text-2xl text-base-content/80">{title}</h2>
                         {
                             badge ?
-                                <div className="badge badge-secondary text-primary rounded-sm">POPULAR</div>
+                                <div className="badge badge-accent text-primary rounded-sm">POPULAR</div>
                                 : null
                         }
                     </div>

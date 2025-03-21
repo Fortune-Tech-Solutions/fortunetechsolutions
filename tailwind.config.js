@@ -8,7 +8,7 @@ export default {
         light: {
           ...theming["light"],
           "primary": "#101010",
-          "secondary": "#FCB712",
+          "secondary": "#f0f0f0",
           "accent": "#FCB712",
         }
       },
@@ -16,7 +16,7 @@ export default {
         black: {
           ...theming["black"],
           "primary": "#101010",
-          "secondary": "#FCB712",
+          "secondary": "#f0f0f0",
           "accent": "#FCB712",
         }
       }
