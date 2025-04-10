@@ -38,15 +38,15 @@ const NavBar = () => {
 
             <div className={`
                 dark:border-b border-b-black border-b bg-base-100 h-[100lvh] fixed w-full transition-all duration-150 ease-in z-30
-                ${isMenuOpen ? "opacity-100 -translate-y-0" : "duration-500 opacity-0 border-b-transparent"}
+                ${isMenuOpen ? "opacity-100 -translate-y-0" : "translate-y-full duration-500 opacity-0 border-b-transparent"}
                 `}>
                 <ul className={`menu text-base-content min-h-full w-full p-4 relative translate-y-16 overflow-x-hidden items-center`}>
-                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[150ms] opacity-100 transition-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section0' smooth={true} className='rounded text-2xl py-5' offset={-100} >Home</Link></li>
-                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[250ms] opacity-100 transition-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section1' smooth={true} className='rounded text-2xl py-5'>About Us</Link></li>
-                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[350ms] opacity-100 transition-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section2' smooth={true} className='rounded text-2xl py-5' offset={-20} >Services</Link></li>
-                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[450ms] opacity-100 transition-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section3' smooth={true} className='rounded text-2xl py-5'>Projects</Link></li>
-                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[550ms] opacity-100 transition-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section4' smooth={true} className='rounded text-2xl py-5'>Pricing</Link></li>
-                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[650ms] opacity-100 transition-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section5' smooth={true} className='rounded text-2xl py-5' offset={-10} >Contacts</Link></li>
+                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[150ms] opacity-100 translate-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section0' smooth={true} className='rounded text-2xl py-5' offset={-100} >Home</Link></li>
+                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[250ms] opacity-100 translate-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section1' smooth={true} className='rounded text-2xl py-5'>About Us</Link></li>
+                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[350ms] opacity-100 translate-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section2' smooth={true} className='rounded text-2xl py-5' offset={-20} >Services</Link></li>
+                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[450ms] opacity-100 translate-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section3' smooth={true} className='rounded text-2xl py-5'>Projects</Link></li>
+                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[550ms] opacity-100 translate-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section4' smooth={true} className='rounded text-2xl py-5'>Pricing</Link></li>
+                    <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[650ms] opacity-100 translate-x-0":"opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section5' smooth={true} className='rounded text-2xl py-5' offset={-10} >Contacts</Link></li>
                 </ul>
             </div>
 
