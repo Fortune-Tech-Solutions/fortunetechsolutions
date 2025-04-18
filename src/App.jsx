@@ -8,26 +8,28 @@ import DrawerWrap from './components/DrawerWrap'
 import AboutUs from './sections/AboutUs'
 import Services from './sections/Services'
 import Projects from './sections/Projects'
+import ThemeProvider from './components/ThemeProvider'
+
 
 function App() {
   return (
     <>
+      <ThemeProvider>
+        <DrawerWrap>
+          <NavBar />
 
-      <DrawerWrap>
-        <NavBar />
+          <Hero />
 
-        <Hero />
+          <Section container content={<AboutUs />} id={1} />
+          <Section container content={<Services />} id={2} />
+          <Section content={<Projects />} id={3} />
+          <Section content={<Pricing />} id={4} />
 
-        <Section container content={<AboutUs />} id={1} />
-        <Section container content={<Services />} id={2} />
-        <Section content={<Projects />} id={3} />
-        <Section content={<Pricing />} id={4} />
+          <Section content={<Contacts />} id={5} />
 
-        <Section content={<Contacts />} id={5} />
-
-        <Footer />
-      </DrawerWrap>
-
+          <Footer />
+        </DrawerWrap>
+      </ThemeProvider>
     </>
   )
 }

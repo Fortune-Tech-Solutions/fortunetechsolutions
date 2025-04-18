@@ -1,31 +1,21 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeContext";
 
-const ThemeSelector = ({setDarkTheme, darkTheme}) => {
+const ThemeSelector = () => {
 
-/**
- * This component in allows users to 
- * toggle between a bumblebee and dark
- * theme using icons via a hidden checkbox 
- * and saves the selected theme in local storage.
- */
-    
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+    /**
+     * This component in allows users to 
+     * toggle between a bumblebee and dark
+     * theme using icons via a hidden checkbox 
+     * and saves the selected theme in local storage.
+     */
 
-    useEffect(() => {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-        
-        if (theme == "black") {
-            setDarkTheme(true)
-        } else {
-            setDarkTheme(false)
-        }
-        
-    }, [theme, setDarkTheme]);
+    const { darkTheme, theme, setTheme } = useContext(ThemeContext);
+
 
     const handleThemeChange = (event) => {
         const selectedTheme = event.target.checked ? 'black' : 'light';
-        
+
         setTheme(selectedTheme);
     };
 
