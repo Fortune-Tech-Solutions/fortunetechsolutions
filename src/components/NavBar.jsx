@@ -40,9 +40,9 @@ const NavBar = () => {
 
             <div className={`
                 ${darkTheme ? "border-b" : ""} border-b-black border-b h-[100lvh] fixed w-full transition-all duration-150 ease-in z-30
-                ${isMenuOpen ? "opacity-100 -translate-y-0" : "translate-y-full duration-500 opacity-0 border-b-transparent"}
+                ${isMenuOpen ? "opacity-100 -translate-y-0" : " -translate-y-full duration-500 opacity-0 border-b-transparent"}
                 `}>
-                <ul className={`menu text-base-content min-h-full w-full p-4 relative translate-y-16 overflow-x-hidden items-center`}>
+                <ul className={`menu text-base-content bg-base-200 min-h-full w-full p-4 relative translate-y-16 overflow-x-hidden items-center`}>
                     <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[150ms] opacity-100 translate-x-0" : "opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section0' smooth={true} className='rounded text-2xl py-5' offset={-100} >Home</Link></li>
                     <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[250ms] opacity-100 translate-x-0" : "opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section1' smooth={true} className='rounded text-2xl py-5'>About Us</Link></li>
                     <li className={`transition-all ${isMenuOpen ? "duration-500 delay-[350ms] opacity-100 translate-x-0" : "opacity-0 duration-0 translate-x-full"}`}><Link onClick={handleChangeMenu} to='section2' smooth={true} className='rounded text-2xl py-5' offset={-20} >Services</Link></li>
@@ -82,8 +82,8 @@ const NavBar = () => {
                     <Link to='section1' smooth={true} className='btn btn-ghost btn-primary rounded-sm'>About Us</Link>
                     <Link to='section2' smooth={true} offset={-40} className='btn btn-ghost btn-primary rounded-sm'>Services</Link>
                     <Link to='section3' smooth={true} className='btn btn-ghost btn-primary rounded-sm'>Projects</Link>
-                    <Link to='section4' smooth={true} className='btn btn-ghost btn-primary rounded-sm'>Pricing</Link>
-                    <Link to='section5' smooth={true} className='btn btn-ghost btn-primary rounded-sm'>Contacts</Link>
+                    {/* <Link to='section4' smooth={true} className='btn btn-ghost btn-primary rounded-sm'>Pricing</Link> */}
+                    <Link to='section5' smooth={true} className='btn btn-ghost btn-primary rounded-sm'>Contact Us</Link>
                 </div>
 
 

@@ -143,7 +143,7 @@ const EmailForm = () => {
 
             if (res) {
                 console.log("success");
-                
+
                 setFormData({
                     from_email: { value: "", isValid: true, errorMessage: "" },
                     from_firstName: { value: "", isValid: true, errorMessage: "" },
@@ -221,6 +221,17 @@ const EmailForm = () => {
                         className={`input ${!formData.from_email.isValid ? "border-error" : "border-base-content/75"} rounded w-full max-w-lg`}
                         placeholder="Your email"
                     />
+                </div>
+
+                <div className="form-control">
+                    <label className="label" htmlFor="from_email">Email</label>
+                    <div className={`transition duration-0 tooltip tooltip-error tooltip-open ${formData.from_email.isValid ? "opacity-0" : "opacity-100"}`} data-tip={formData.from_email.errorMessage} />
+                    <select defaultValue="Pick a color" className="select border-base-content/75 rounded w-full max-w-lg">
+                        <option disabled={true}>Pick a color</option>
+                        <option>Crimson</option>
+                        <option>Amber</option>
+                        <option>Velvet</option>
+                    </select>
                 </div>
 
                 <div className="flex flex-col lg:flex-row items-center lg:space-x-4">
