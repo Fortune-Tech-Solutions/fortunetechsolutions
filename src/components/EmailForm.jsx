@@ -223,7 +223,7 @@ const EmailForm = () => {
                     />
                 </div>
 
-                <div className="form-control">
+                {/* <div className="form-control">
                     <label className="label" htmlFor="from_email">Email</label>
                     <div className={`transition duration-0 tooltip tooltip-error tooltip-open ${formData.from_email.isValid ? "opacity-0" : "opacity-100"}`} data-tip={formData.from_email.errorMessage} />
                     <select defaultValue="Pick a color" className="select border-base-content/75 rounded w-full max-w-lg">
@@ -232,7 +232,7 @@ const EmailForm = () => {
                         <option>Amber</option>
                         <option>Velvet</option>
                     </select>
-                </div>
+                </div> */}
 
                 <div className="flex flex-col lg:flex-row items-center lg:space-x-4">
                     <div className="form-control w-full">
