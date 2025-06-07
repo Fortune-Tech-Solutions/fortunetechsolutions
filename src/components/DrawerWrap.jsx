@@ -23,8 +23,8 @@ const DrawerWrap = ({ children }) => {
                         <li><Link onClick={handleIsCheckedChange} to='section1' smooth={true} className='rounded text-lg py-4'>About Us</Link></li>
                         <li><Link onClick={handleIsCheckedChange} to='section2' smooth={true} className='rounded text-lg py-4' offset={-20} >Services</Link></li>
                         <li><Link onClick={handleIsCheckedChange} to='section3' smooth={true} className='rounded text-lg py-4'>Projects</Link></li>
-                        <li><Link onClick={handleIsCheckedChange} to='section4' smooth={true} className='rounded text-lg py-4'>Pricing</Link></li>
-                        <li><Link onClick={handleIsCheckedChange} to='section5' smooth={true} className='rounded text-lg py-4' offset={-10} >Contacts</Link></li>
+                        {/* <li><Link onClick={handleIsCheckedChange} to='section4' smooth={true} className='rounded text-lg py-4'>Pricing</Link></li> */}
+                        <li><Link onClick={handleIsCheckedChange} to='section5' smooth={true} className='rounded text-lg py-4' offset={-10} >Contact Us</Link></li>
                     </ul>
 
                     {/* <div className='self-end mx-4 my-1'>

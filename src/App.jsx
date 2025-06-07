@@ -23,7 +23,7 @@ function App() {
           <Section container content={<AboutUs />} id={1} />
           <Section container content={<Services />} id={2} />
           <Section content={<Projects />} id={3} />
-          <Section content={<Pricing />} id={4} />
+          {/* <Section content={<Pricing />} id={4} /> */}
 
           <Section content={<Contacts />} id={5} />
 
