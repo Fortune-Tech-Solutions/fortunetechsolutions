@@ -1,5 +1,6 @@
 import nhan from "../assets/testimonies/nhan.png"
 import wes from "../assets/testimonies/wes.png"
+import paniel from "../assets/testimonies/paniel.png"
 
 
 const testimonies = [
@@ -14,6 +15,12 @@ const testimonies = [
         image: wes,
         name: "Wes",
         position: "Coach, CEO at CashOfferSolid"
+    },
+    {
+        message: "Fortune Tech Solutions is a highly organized and systematic service company that consistently delivers 5-star results on every project and request. Their efficient team handles all IT and design-related concerns with precision, significantly enhancing my marketing strategies and campaigns. What truly sets them apart is their responsiveness, the accuracy of their job request reports, and the seamless accessibility of the websites they develop.These qualities make them a top choice when it comes to meeting my tech needs.I highly recommend Fortune Tech Solutions for their exceptional service and outstanding team competence.",
+        image: paniel,
+        name: "Paniel",
+        position: "Marketing at Insurance Enterprise USA"
     },
 ]
 
